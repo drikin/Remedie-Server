@@ -14,6 +14,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D7485BFF100AFB62007E3C13 /* status_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485BFE100AFB62007E3C13 /* status_icon.png */; };
 		D7485C0B100AFCA5007E3C13 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D7485C0A100AFCA5007E3C13 /* icon.icns */; };
+		D7893AA7100AFF60004165B7 /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7893AA6100AFF60004165B7 /* TaskWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		8D1107320486CEB800E47090 /* Remedie Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remedie Server.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7485BFE100AFB62007E3C13 /* status_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = status_icon.png; path = Resources/status_icon.png; sourceTree = "<group>"; };
 		D7485C0A100AFCA5007E3C13 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = Resources/icon.icns; sourceTree = "<group>"; };
+		D7893AA5100AFF60004165B7 /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskWrapper.h; path = src/TaskWrapper.h; sourceTree = "<group>"; };
+		D7893AA6100AFF60004165B7 /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskWrapper.m; path = src/TaskWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D7893AA5100AFF60004165B7 /* TaskWrapper.h */,
+				D7893AA6100AFF60004165B7 /* TaskWrapper.m */,
 				256AC3D80F4B6AC300CF3369 /* Remedie_ServerAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* Remedie_ServerAppDelegate.m */,
 			);
@@ -184,6 +189,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* Remedie_ServerAppDelegate.m in Sources */,
+				D7893AA7100AFF60004165B7 /* TaskWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

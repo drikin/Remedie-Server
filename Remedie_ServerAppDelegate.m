@@ -13,12 +13,50 @@
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	NSLog(@"Hello world");
   [self createStatusBar];
+  [self run:self];
+}
+
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
+  [task stopProcess];
+  [task release];
+}
+
+- (IBAction)run:(id)sender
+{
+  if (task != nil) {
+    [task release];
+  }
+
+  NSBundle* bundle = [NSBundle mainBundle];
+  NSString* scriptPath = [bundle pathForResource:@"script" ofType:@""];
+  NSLog(@"%@", scriptPath);
+
+  task=[[TaskWrapper alloc] initWithController:self 
+                                     arguments:[NSArray arrayWithObjects:@"/bin/sh", scriptPath, nil]];
+  [task startProcess];
+  [task waitUntilExit];
+  [task retain];
+}
+
+- (void)appendOutput:(NSString *)output
+{
+  [[consoleTextField textStorage] appendAttributedString: [[[NSAttributedString alloc]
+                                                            initWithString: output] autorelease]];
+}
+
+- (void)processStarted
+{
+  [consoleTextField setString:@"Starting...\n"];
+}
+
+- (void)processFinished
+{
+  [consoleTextField setString:@"Finished.\n"];
 }
 
 @end
-
 
 #pragma mark private methods
 @implementation Remedie_ServerAppDelegate (Private)
