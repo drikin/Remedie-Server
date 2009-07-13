@@ -8,6 +8,8 @@
 
 #import "Remedie_ServerAppDelegate.h"
 
+#define REMEDIE_TOP_URL         @"http://127.0.0.1:10010/"
+
 @implementation Remedie_ServerAppDelegate
 
 @synthesize window;
@@ -23,6 +25,11 @@
   [task release];
 }
 
+- (IBAction)openRemedie:(id)sender;
+{
+  [[NSWorkspace sharedWorkspace] openURL:[[[NSURL alloc] initWithString:REMEDIE_TOP_URL] autorelease]];
+}
+
 - (IBAction)run:(id)sender
 {
   if (task != nil) {
@@ -36,7 +43,6 @@
   task=[[TaskWrapper alloc] initWithController:self 
                                      arguments:[NSArray arrayWithObjects:@"/bin/sh", scriptPath, nil]];
   [task startProcess];
-  [task waitUntilExit];
   [task retain];
 }
 

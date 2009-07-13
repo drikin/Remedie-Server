@@ -21,6 +21,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+- (IBAction)openRemedie:(id)sender;
 - (IBAction)run:(id)sender;
 - (IBAction)kill:(id)sender;
 
