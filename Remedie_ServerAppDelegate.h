@@ -24,7 +24,6 @@
 
 - (IBAction)openRemedie:(id)sender;
 - (IBAction)run:(id)sender;
-- (IBAction)refresh:(id)sender;
 
 @end
 

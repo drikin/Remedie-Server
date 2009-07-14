@@ -54,18 +54,6 @@
   [task retain];
 }
 
-- (IBAction)refresh:(id)sender;
-{
-  NSBundle* bundle = [NSBundle mainBundle];
-  NSString* scriptPath = [bundle pathForResource:@"refresh" ofType:@"" inDirectory:@"tools"];
-  NSLog(@"%@", scriptPath);
-  
-  TaskWrapper *refreshTask=[[TaskWrapper alloc] initWithController:self 
-                                     arguments:[NSArray arrayWithObjects:@"/bin/sh", scriptPath, nil]];
-  [refreshTask startProcess];
-  [refreshTask release];
-}
-
 - (void)appendOutput:(NSString *)output
 {
   [[consoleTextField textStorage] appendAttributedString: [[[NSAttributedString alloc]
