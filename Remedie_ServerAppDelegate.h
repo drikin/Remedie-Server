@@ -13,6 +13,7 @@
   IBOutlet id           consoleTextField;
   IBOutlet id           statusBarMenu;
   IBOutlet id           statusBarItem;
+  IBOutlet id           openConfirmPanel;
   
   NSWindow              *window;
   

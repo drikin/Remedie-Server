@@ -17,6 +17,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   [self createStatusBar];
   [self run:self];
+  
+	if (![[[NSUserDefaultsController sharedUserDefaultsController] valueForKeyPath:@"values.dontAskMeAgain"] boolValue]) {
+    [openConfirmPanel center];
+    [openConfirmPanel makeKeyAndOrderFront:self];
+  }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
@@ -27,6 +32,9 @@
 
 - (IBAction)openRemedie:(id)sender;
 {
+  if ([openConfirmPanel isVisible]) {
+    [openConfirmPanel close];
+  }
   [[NSWorkspace sharedWorkspace] openURL:[[[NSURL alloc] initWithString:REMEDIE_TOP_URL] autorelease]];
 }
 
