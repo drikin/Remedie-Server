@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+<channel>
+    <title>BBT2 Appcast</title>
+    <link>http://drikin.com/bbt/</link>
+    <description>BBT2 update history</description>
+    <language>en</language>
+    <item>
+        <title>BBT2 1.0.50</title>
+		<enclosure sparkle:version="1.0.50" url="http://dl.getdropbox.com/u/1025/bbt2/BBT2.zip" length="730000" type="application/octet-stream"/>
+        <sparkle:releaseNotesLink>http://dl.getdropbox.com/u/1025/bbt2/bbt2.html</sparkle:releaseNotesLink>
+    </item> 
+</channel>
+</rss>
+
